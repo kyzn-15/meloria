@@ -1,0 +1,287 @@
+:root{
+    --yellow: rgb(244, 228, 168);
+    --red: rgb(215, 129, 99);
+    --trans: rgba(240, 189, 179, 0.815);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 1000px;
+    background-color: var(--yellow) !important;
+    overflow-x: hidden;
+}
+
+nav{
+    background-color: var(--red);
+    margin: 1rem;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo{
+    --size: 3rem;
+    width: var(--size);
+    height: var(--size);
+    background-image: url(./images/logo_ardraxis.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.links{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--trans);
+    width: 30vw;
+    border-radius: 2rem;
+}
+
+.links a{
+    color: black;
+    text-decoration: none;
+}
+
+button.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 12rem;
+    border: none;
+    background-color: var(--trans);
+    border-radius: 2rem;
+}
+
+button.register span{
+    --size: 2rem;
+    min-width: var(--size);
+    min-height: var(--size);
+    font-size: 1.2rem;
+    background-color: rgb(223, 170, 160);
+    border-radius: 50%;
+}
+
+section.about{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    gap: 7%;
+    margin: 0 auto;
+}
+
+img.poster{
+    --size: 40vw;
+    width: var(--size);
+    height: calc(var(--size)*1.3);
+    border-radius: 2%;
+}
+
+
+h1.title{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+button.btn{
+    border-radius: 2rem !important;
+}
+
+
+section.about-event{
+    width: 90vw;
+    margin: 0 auto;
+}
+
+
+.poster-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    flex-wrap: wrap;
+}
+
+.poster-wrap .poster{
+    --size: 25vw;
+    margin: 2rem;
+}
+
+footer{
+    background-color: rgb(157, 56, 44);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.footer-logo{
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.footer-title{
+    font-weight: 700;
+}
+
+#logo-footer{
+    --size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.footer-center{
+    width: 50vw;
+    
+}
+
+.center-1{
+    background-color: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 40vw;
+}
+
+.center-1 .footer-title{
+    font-size: 1.5rem;
+}
+
+#register-footer{
+    min-width: 10rem !important;
+    padding: 1rem !important;
+}
+
+.center-2{
+    background-color: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 30vw;
+}
+
+.center-2 input {
+    width: 14rem;
+    background-color: rgb(220, 215, 215);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+}
+
+#btn-footer{
+    padding: 0.5rem 1rem !important;
+}
+
+.footer-end{
+    max-width: 50vw;
+}
+
+.sosmed{
+    background-color: white;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: black;
+}
+
+.credit{
+    background-color: white;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media  screen and (max-width: 850px) {
+     .footer-center{
+        width: 80vw;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .center-1, .center-2{
+        width: 80vw;
+    }
+
+    .sosmed, .credit{
+        width: 80vw;
+        font-size: 1.5rem;
+    }
+    
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-end{
+        flex-direction: column;
+        display: none;
+    }
+
+    .footer-center .center-1{
+        flex-direction: column;
+    }
+}
+
+@media  screen and (max-width: 768px){
+    nav{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .links{
+        width: 80vw;
+    }
+
+    section.about{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    img.poster{
+        --size: 80vw;
+        width: var(--size);
+        height: calc(var(--size)*1.3);
+    }
+
+    .poster-wrap .poster{
+        --size: 70vw;
+    }
+    
+}
